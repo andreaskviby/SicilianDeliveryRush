@@ -92,32 +92,48 @@ struct VehicleSelectionView: View {
     @Bindable var coordinator: GameCoordinator
 
     var body: some View {
-        VStack(spacing: 24) {
-            Text("Choose your ride")
-                .font(.system(size: 18, weight: .medium))
-                .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
-                .padding(.top, 24)
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 20) {
+                Text("Choose your ride")
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
+                    .padding(.top, 16)
 
-            HStack(spacing: 20) {
-                VehicleCard(
-                    type: .vespa,
-                    isSelected: coordinator.selectedVehicle == .vespa,
-                    onSelect: {
-                        coordinator.selectVehicle(.vespa)
-                    }
-                )
+                HStack(spacing: 16) {
+                    VehicleCard(
+                        type: .vespa,
+                        isSelected: coordinator.selectedVehicle == .vespa,
+                        onSelect: {
+                            coordinator.selectVehicle(.vespa)
+                        }
+                    )
 
-                VehicleCard(
-                    type: .apeLambretta,
-                    isSelected: coordinator.selectedVehicle == .apeLambretta,
-                    onSelect: {
-                        coordinator.selectVehicle(.apeLambretta)
-                    }
-                )
+                    VehicleCard(
+                        type: .apeLambretta,
+                        isSelected: coordinator.selectedVehicle == .apeLambretta,
+                        onSelect: {
+                            coordinator.selectVehicle(.apeLambretta)
+                        }
+                    )
+                }
+                .padding(.horizontal, 16)
+
+                Button(action: {
+                    coordinator.proceedToCargoLoading()
+                }) {
+                    Text("CONTINUE")
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(
+                            RoundedRectangle(cornerRadius: 14)
+                                .fill(Color(red: 0.78, green: 0.36, blue: 0.22))
+                        )
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 32)
             }
-            .padding(.horizontal, 16)
-
-            Spacer()
         }
     }
 }
@@ -203,49 +219,49 @@ struct CargoLoadingView: View {
     @Bindable var coordinator: GameCoordinator
 
     var body: some View {
-        VStack(spacing: 16) {
-            VehicleCargoArea(
-                vehicleType: coordinator.selectedVehicle,
-                loadedCargo: coordinator.loadedCargo
-            )
-            .frame(height: 200)
-            .padding(.horizontal, 16)
-            .padding(.top, 16)
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                VehicleCargoArea(
+                    vehicleType: coordinator.selectedVehicle,
+                    loadedCargo: coordinator.loadedCargo
+                )
+                .frame(height: 180)
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
 
-            BalanceIndicator(cargo: coordinator.loadedCargo)
+                BalanceIndicator(cargo: coordinator.loadedCargo)
+                    .padding(.horizontal, 16)
+
+                Text("Tap items below to load")
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
+
+                AvailableCargoGrid(
+                    items: coordinator.harvestedItems,
+                    onItemTap: { item in
+                        coordinator.loadCargoItem(item)
+                    }
+                )
                 .padding(.horizontal, 16)
 
-            Text("Tap items below to load")
-                .font(.system(size: 14))
-                .foregroundColor(.gray)
-
-            AvailableCargoGrid(
-                items: coordinator.harvestedItems,
-                onItemTap: { item in
-                    coordinator.loadCargoItem(item)
+                Button(action: {
+                    coordinator.confirmRouteAndStartDriving()
+                }) {
+                    Text("START DELIVERY")
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(
+                            RoundedRectangle(cornerRadius: 14)
+                                .fill(coordinator.loadedCargo.isEmpty ?
+                                      Color.gray : Color(red: 0.78, green: 0.36, blue: 0.22))
+                        )
                 }
-            )
-            .padding(.horizontal, 16)
-
-            Spacer()
-
-            Button(action: {
-                coordinator.confirmRouteAndStartDriving()
-            }) {
-                Text("START DELIVERY")
-                    .font(.system(size: 18, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 56)
-                    .background(
-                        RoundedRectangle(cornerRadius: 14)
-                            .fill(coordinator.loadedCargo.isEmpty ?
-                                  Color.gray : Color(red: 0.78, green: 0.36, blue: 0.22))
-                    )
+                .disabled(coordinator.loadedCargo.isEmpty)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 32)
             }
-            .disabled(coordinator.loadedCargo.isEmpty)
-            .padding(.horizontal, 16)
-            .padding(.bottom, 32)
         }
     }
 }

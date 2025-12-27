@@ -117,6 +117,9 @@ final class GameCoordinator {
 
     func selectVehicle(_ type: VehicleType) {
         selectedVehicle = type
+    }
+
+    func proceedToCargoLoading() {
         transitionTo(.loading(.loadingCargo))
     }
 
