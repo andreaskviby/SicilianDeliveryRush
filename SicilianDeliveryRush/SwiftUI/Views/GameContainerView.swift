@@ -61,6 +61,12 @@ struct SceneKitContainer: UIViewRepresentable {
         scnView.preferredFramesPerSecond = 60
         scnView.autoenablesDefaultLighting = false
 
+        // Set the camera from the scene's camera controller
+        if let gameScene = scene as? BaseGameScene,
+           let cameraNode = gameScene.cameraController?.cameraNode {
+            scnView.pointOfView = cameraNode
+        }
+
         scnView.delegate = context.coordinator
         scnView.isPlaying = true
 
@@ -70,6 +76,12 @@ struct SceneKitContainer: UIViewRepresentable {
     func updateUIView(_ uiView: SCNView, context: Context) {
         if uiView.scene !== scene {
             uiView.scene = scene
+
+            // Update the camera point of view when scene changes
+            if let gameScene = scene as? BaseGameScene,
+               let cameraNode = gameScene.cameraController?.cameraNode {
+                uiView.pointOfView = cameraNode
+            }
         }
     }
 

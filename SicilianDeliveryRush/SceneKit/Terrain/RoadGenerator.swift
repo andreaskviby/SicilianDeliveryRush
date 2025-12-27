@@ -35,12 +35,16 @@ final class RoadGenerator {
     private let roadSegmentLength: Float = 2.0
 
     private var segments: [RoadSegment] = []
+    private weak var terrain: MountainTerrain?
 
     func generateMountainRoad(
         startPoint: simd_float3,
         endPoint: simd_float3,
-        complexity: RoadComplexity
+        complexity: RoadComplexity,
+        terrain: MountainTerrain? = nil
     ) -> SCNNode {
+        self.terrain = terrain
+
         let roadNode = SCNNode()
         roadNode.name = "road"
 
@@ -90,8 +94,13 @@ final class RoadGenerator {
 
             var point = basePoint + deviation
 
-            let heightProgress = 1.0 - t
-            point.y = start.y * heightProgress + end.y * t
+            // Get height from terrain if available, otherwise interpolate
+            if let terrain = terrain {
+                point.y = terrain.heightAt(x: point.x, z: point.z) + 0.1
+            } else {
+                let heightProgress = 1.0 - t
+                point.y = start.y * heightProgress + end.y * t
+            }
 
             points.append(point)
         }
@@ -114,8 +123,18 @@ final class RoadGenerator {
             for j in 0..<numSegmentsPerCurve {
                 let t = Float(j) / Float(numSegmentsPerCurve)
 
-                let position = catmullRom(p0: p0, p1: p1, p2: p2, p3: p3, t: t)
-                let nextPos = catmullRom(p0: p0, p1: p1, p2: p2, p3: p3, t: min(t + 0.01, 1.0))
+                var position = catmullRom(p0: p0, p1: p1, p2: p2, p3: p3, t: t)
+
+                // Ensure road follows terrain height at each segment
+                if let terrain = terrain {
+                    position.y = terrain.heightAt(x: position.x, z: position.z) + 0.1
+                }
+
+                var nextPos = catmullRom(p0: p0, p1: p1, p2: p2, p3: p3, t: min(t + 0.01, 1.0))
+                if let terrain = terrain {
+                    nextPos.y = terrain.heightAt(x: nextPos.x, z: nextPos.z) + 0.1
+                }
+
                 let direction = simd_normalize(nextPos - position)
 
                 let curvature = calculateCurvature(p0: p0, p1: p1, p2: p2, p3: p3, t: t)

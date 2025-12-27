@@ -60,8 +60,9 @@ final class VehiclePhysicsController {
         guard let scene = gameScene else { return }
 
         let vehicleNode = vehicle.node
-        let rayStart = vehicleNode.simdPosition + simd_float3(0, 1, 0)
-        let rayEnd = vehicleNode.simdPosition - simd_float3(0, 2, 0)
+        // Cast ray from above vehicle to below
+        let rayStart = vehicleNode.simdPosition + simd_float3(0, 5, 0)
+        let rayEnd = vehicleNode.simdPosition - simd_float3(0, 10, 0)
 
         let options: [SCNPhysicsWorld.TestOption: Any] = [
             .collisionBitMask: NSNumber(value: PhysicsCategory.road | PhysicsCategory.terrain),
@@ -88,8 +89,17 @@ final class VehiclePhysicsController {
             isOnRoad = hit.node.physicsBody?.categoryBitMask == PhysicsCategory.road
 
             let groundY = Float(hit.worldCoordinates.y)
-            if vehicle.node.simdPosition.y < groundY + 0.3 {
-                vehicle.node.simdPosition.y = groundY + 0.3
+            // Height offset based on vehicle type (wheel radius + some clearance)
+            let heightOffset: Float = 0.3
+
+            // Smoothly adjust vehicle height to follow terrain
+            let targetY = groundY + heightOffset
+            let currentY = vehicle.node.simdPosition.y
+            let heightDiff = targetY - currentY
+
+            // Apply smooth height correction
+            if abs(heightDiff) > 0.01 {
+                vehicle.node.simdPosition.y = currentY + heightDiff * 0.3
             }
         }
     }

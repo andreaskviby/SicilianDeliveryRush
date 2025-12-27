@@ -20,10 +20,12 @@ final class CameraController {
     private weak var targetNode: SCNNode?
     private var mode: CameraMode
 
-    private let fpvOffset = simd_float3(0, 1.2, 0.3)
-    private let fpvLookAhead: Float = 5.0
+    // First-person: rider's eye position
+    private let fpvOffset = simd_float3(0, 1.4, 0.2)
+    private let fpvLookAhead: Float = 10.0
 
-    private let tpOffset = simd_float3(0, 3, -8)
+    // Third-person: behind and above the vehicle (negative Z is behind in SceneKit)
+    private let tpOffset = simd_float3(0, 4, -10)
     private let tpLookOffset = simd_float3(0, 1, 5)
 
     private var currentPosition: simd_float3 = .zero

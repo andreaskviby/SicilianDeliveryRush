@@ -55,15 +55,28 @@ final class DrivingScene: BaseGameScene {
     }
 
     private func setupRoad() {
+        guard let terrain = terrain else { return }
+
         roadGenerator = RoadGenerator()
 
-        let startPoint = simd_float3(0, 45, -80)
-        let endPoint = simd_float3(50, 5, 80)
+        // Get terrain heights at start and end positions
+        let startX: Float = 0
+        let startZ: Float = -80
+        let endX: Float = 50
+        let endZ: Float = 80
+
+        let startHeight = terrain.heightAt(x: startX, z: startZ)
+        let endHeight = terrain.heightAt(x: endX, z: endZ)
+
+        // Position road slightly above terrain surface
+        let startPoint = simd_float3(startX, startHeight + 0.1, startZ)
+        let endPoint = simd_float3(endX, endHeight + 0.1, endZ)
 
         guard let road = roadGenerator?.generateMountainRoad(
             startPoint: startPoint,
             endPoint: endPoint,
-            complexity: .medium
+            complexity: .medium,
+            terrain: terrain
         ) else { return }
 
         rootNode.addChildNode(road)
@@ -77,17 +90,23 @@ final class DrivingScene: BaseGameScene {
 
         if let startPos = roadGenerator?.getStartPosition(),
            let startDir = roadGenerator?.getStartDirection() {
+            // Position vehicle on the road with proper height offset for wheels
             vehicle.node.simdPosition = startPos + simd_float3(0, 0.5, 0)
 
+            // Calculate rotation to face the road direction
             let angle = atan2(startDir.x, startDir.z)
             vehicle.node.simdEulerAngles.y = angle
         } else {
-            vehicle.node.simdPosition = simd_float3(0, 46, -80)
+            // Fallback: position on terrain
+            let fallbackX: Float = 0
+            let fallbackZ: Float = -80
+            let terrainHeight = terrain?.heightAt(x: fallbackX, z: fallbackZ) ?? 0
+            vehicle.node.simdPosition = simd_float3(fallbackX, terrainHeight + 0.5, fallbackZ)
         }
 
         rootNode.addChildNode(vehicle.node)
 
-        vehiclePhysics = VehiclePhysicsController(vehicle: vehicle)
+        vehiclePhysics = VehiclePhysicsController(vehicle: vehicle, scene: self)
         vehiclePhysics?.cargoLostHandler = { [weak self] cargoNode in
             self?.handleCargoLost(cargoNode)
         }
@@ -110,7 +129,7 @@ final class DrivingScene: BaseGameScene {
 
         cameraController = CameraController(
             target: vehicle.node,
-            mode: .firstPerson
+            mode: .thirdPerson
         )
         cameraController?.setupCamera(in: self)
         cameraController?.teleportToTarget()
@@ -204,6 +223,10 @@ final class DrivingScene: BaseGameScene {
     }
 
     override func update(deltaTime: TimeInterval) {
+        // Always update camera so player can see the scene during countdown
+        cameraController?.update(deltaTime: deltaTime)
+
+        // Only update game logic when race is active
         guard isRaceActive else { return }
 
         if raceStartTime == nil {
@@ -212,8 +235,6 @@ final class DrivingScene: BaseGameScene {
         elapsedTime = CACurrentMediaTime() - (raceStartTime ?? 0)
 
         vehiclePhysics?.update(deltaTime: deltaTime, input: currentInput)
-
-        cameraController?.update(deltaTime: deltaTime)
 
         collisionHandler.cleanup(currentTime: CACurrentMediaTime())
     }

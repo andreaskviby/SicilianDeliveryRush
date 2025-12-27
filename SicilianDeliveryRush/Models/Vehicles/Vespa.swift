@@ -100,14 +100,14 @@ final class Vespa: Vehicle {
             options: nil
         )
 
-        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+        // Use kinematic physics - we control position manually
+        node.physicsBody = SCNPhysicsBody(type: .kinematic, shape: shape)
         node.physicsBody?.mass = CGFloat(mass)
         node.physicsBody?.friction = 0.8
         node.physicsBody?.restitution = 0.1
-        node.physicsBody?.angularDamping = 0.9
         node.physicsBody?.categoryBitMask = PhysicsCategory.vehicle
-        node.physicsBody?.contactTestBitMask = PhysicsCategory.obstacle | PhysicsCategory.road | PhysicsCategory.trigger
-        node.physicsBody?.collisionBitMask = PhysicsCategory.obstacle | PhysicsCategory.terrain
+        node.physicsBody?.contactTestBitMask = PhysicsCategory.obstacle | PhysicsCategory.road | PhysicsCategory.trigger | PhysicsCategory.terrain
+        node.physicsBody?.collisionBitMask = PhysicsCategory.none
     }
 
     func updatePhysics(deltaTime: TimeInterval) {
