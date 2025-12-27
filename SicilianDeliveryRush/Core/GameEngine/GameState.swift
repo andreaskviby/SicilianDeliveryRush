@@ -1,6 +1,6 @@
 import Foundation
 
-enum GamePhase: Equatable {
+indirect enum GamePhase: Equatable {
     case mainMenu
     case farm(FarmPhase)
     case loading(LoadingPhase)

@@ -137,12 +137,23 @@ final class RoadGenerator {
         let t2 = t * t
         let t3 = t2 * t
 
-        return 0.5 * (
-            (2 * p1) +
-            (-p0 + p2) * t +
-            (2 * p0 - 5 * p1 + 4 * p2 - p3) * t2 +
-            (-p0 + 3 * p1 - 3 * p2 + p3) * t3
-        )
+        let term0: simd_float3 = 2 * p1
+        let negP0: simd_float3 = -p0
+        let term1: simd_float3 = (negP0 + p2) * t
+
+        let twoP0: simd_float3 = 2 * p0
+        let fiveP1: simd_float3 = 5 * p1
+        let fourP2: simd_float3 = 4 * p2
+        let term2Part: simd_float3 = twoP0 - fiveP1 + fourP2 - p3
+        let term2: simd_float3 = term2Part * t2
+
+        let threeP1: simd_float3 = 3 * p1
+        let threeP2: simd_float3 = 3 * p2
+        let term3Part: simd_float3 = negP0 + threeP1 - threeP2 + p3
+        let term3: simd_float3 = term3Part * t3
+
+        let sum: simd_float3 = term0 + term1 + term2 + term3
+        return 0.5 * sum
     }
 
     private func calculateCurvature(p0: simd_float3, p1: simd_float3, p2: simd_float3, p3: simd_float3, t: Float) -> Float {

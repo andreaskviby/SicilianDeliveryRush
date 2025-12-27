@@ -13,7 +13,8 @@ struct VehicleInput {
 }
 
 final class VehiclePhysicsController {
-    let vehicle: Vehicle
+    let vehicle: any Vehicle
+    weak var gameScene: SCNScene?
     private var cargoNodes: [CargoNode] = []
 
     private var roadNormal: simd_float3 = simd_float3(0, 1, 0)
@@ -24,10 +25,11 @@ final class VehiclePhysicsController {
     private var lastPosition: simd_float3 = .zero
     private var actualVelocity: simd_float3 = .zero
 
-    weak var cargoLostHandler: ((CargoNode) -> Void)?
+    var cargoLostHandler: ((CargoNode) -> Void)?
 
-    init(vehicle: Vehicle) {
+    init(vehicle: any Vehicle, scene: SCNScene? = nil) {
         self.vehicle = vehicle
+        self.gameScene = scene
         self.lastPosition = vehicle.node.simdPosition
     }
 
@@ -55,18 +57,21 @@ final class VehiclePhysicsController {
     }
 
     private func updateRoadInteraction() {
-        guard let scene = vehicle.node.scene else { return }
+        guard let scene = gameScene else { return }
 
-        let rayStart = vehicle.node.simdPosition + simd_float3(0, 1, 0)
-        let rayEnd = vehicle.node.simdPosition - simd_float3(0, 2, 0)
+        let vehicleNode = vehicle.node
+        let rayStart = vehicleNode.simdPosition + simd_float3(0, 1, 0)
+        let rayEnd = vehicleNode.simdPosition - simd_float3(0, 2, 0)
+
+        let options: [SCNPhysicsWorld.TestOption: Any] = [
+            .collisionBitMask: NSNumber(value: PhysicsCategory.road | PhysicsCategory.terrain),
+            .searchMode: SCNPhysicsWorld.TestSearchMode.closest
+        ]
 
         let hitResults = scene.physicsWorld.rayTestWithSegment(
             from: SCNVector3(rayStart),
             to: SCNVector3(rayEnd),
-            options: [
-                .collisionBitMask: NSNumber(value: PhysicsCategory.road | PhysicsCategory.terrain),
-                .searchMode: SCNPhysicsWorld.TestSearchMode.closest
-            ]
+            options: options
         )
 
         if let hit = hitResults.first {
@@ -112,7 +117,7 @@ final class VehiclePhysicsController {
             let isStable = cargo.updateStability(vehicleLateralG: lateralG, deltaTime: deltaTime)
 
             if !isStable {
-                if let scene = vehicle.node.scene {
+                if let scene = gameScene {
                     cargo.removeFromParentNode()
                     scene.rootNode.addChildNode(cargo)
                 }

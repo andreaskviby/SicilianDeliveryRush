@@ -1,0 +1,197 @@
+{
+  "": {
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/master.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/App/SicilianDeliveryRushApp.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SicilianDeliveryRushApp.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SicilianDeliveryRushApp.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SicilianDeliveryRushApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SicilianDeliveryRushApp.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Core/Audio/AudioManager.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/AudioManager.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/AudioManager.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/AudioManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/AudioManager.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Core/GameEngine/GameConfiguration.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameConfiguration.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameConfiguration.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameConfiguration.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Core/GameEngine/GameCoordinator.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameCoordinator.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameCoordinator.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameCoordinator.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Core/GameEngine/GameState.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameState.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameState.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameState~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameState.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Core/Persistence/PlayerProgress.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PlayerProgress.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PlayerProgress.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PlayerProgress~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PlayerProgress.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Extensions/SCNVector3+Extensions.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SCNVector3+Extensions.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SCNVector3+Extensions.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SCNVector3+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SCNVector3+Extensions.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Input/InputManager.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/InputManager.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/InputManager.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/InputManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/InputManager.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Cargo/CargoItem.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoItem.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoItem.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoItem.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Cargo/CargoType.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoType.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoType.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoType~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoType.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Delivery/DeliveryOrder.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryOrder.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryOrder.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryOrder~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryOrder.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Vehicles/ApeLambretta.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/ApeLambretta.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/ApeLambretta.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/ApeLambretta~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/ApeLambretta.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Vehicles/Vehicle.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vehicle.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vehicle.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vehicle~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vehicle.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/Models/Vehicles/Vespa.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vespa.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vespa.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vespa~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/Vespa.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Camera/CameraController.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CameraController.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CameraController.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CameraController~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CameraController.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Nodes/CargoNode.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoNode.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoNode.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoNode~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CargoNode.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Physics/CollisionHandler.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CollisionHandler.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CollisionHandler.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CollisionHandler~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/CollisionHandler.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Physics/PhysicsCategories.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PhysicsCategories.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PhysicsCategories.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PhysicsCategories~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PhysicsCategories.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Physics/VehiclePhysics.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/VehiclePhysics.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/VehiclePhysics.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/VehiclePhysics~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/VehiclePhysics.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Scenes/BaseGameScene.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/BaseGameScene.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/BaseGameScene.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/BaseGameScene~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/BaseGameScene.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Scenes/DrivingScene.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingScene.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingScene.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingScene~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingScene.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Scenes/FarmScene.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmScene.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmScene.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmScene~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmScene.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Terrain/MountainTerrain.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MountainTerrain.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MountainTerrain.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MountainTerrain~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MountainTerrain.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SceneKit/Terrain/RoadGenerator.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/RoadGenerator.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/RoadGenerator.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/RoadGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/RoadGenerator.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/DeliveryCompleteView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryCompleteView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryCompleteView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryCompleteView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DeliveryCompleteView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/DrivingHUDView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingHUDView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingHUDView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingHUDView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/DrivingHUDView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/FarmHUDView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmHUDView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmHUDView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmHUDView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/FarmHUDView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/GameContainerView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameContainerView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameContainerView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameContainerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/GameContainerView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/LoadingPhaseView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/LoadingPhaseView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/LoadingPhaseView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/LoadingPhaseView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/LoadingPhaseView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/MainMenuView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MainMenuView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MainMenuView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MainMenuView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/MainMenuView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/PauseMenuView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PauseMenuView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PauseMenuView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PauseMenuView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/PauseMenuView.swiftdeps"
+  },
+  "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/SicilianDeliveryRush/SwiftUI/Views/SettingsView.swift": {
+    "dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SettingsView.d",
+    "object": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SettingsView.swiftdeps"
+  }
+}

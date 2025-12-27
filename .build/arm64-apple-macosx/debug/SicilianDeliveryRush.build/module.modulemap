@@ -1,0 +1,4 @@
+module SicilianDeliveryRush {
+    header "/Users/andreaskviby/Herd/weboughtanadventuryinsicily/.build/arm64-apple-macosx/debug/SicilianDeliveryRush.build/SicilianDeliveryRush-Swift.h"
+    requires objc
+}

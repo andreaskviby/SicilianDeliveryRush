@@ -2,20 +2,6 @@ import CoreMotion
 import UIKit
 import Combine
 
-enum ControlType: String, CaseIterable, Codable {
-    case tilt
-    case touch
-    case twoThumb
-
-    var displayName: String {
-        switch self {
-        case .tilt: return "Tilt"
-        case .touch: return "Touch"
-        case .twoThumb: return "Two Thumb"
-        }
-    }
-}
-
 struct InputState {
     var steering: Float = 0
     var throttle: Float = 0
@@ -26,7 +12,7 @@ struct InputState {
 
 final class InputManager: ObservableObject {
     @Published var currentInput = InputState()
-    @Published var controlType: ControlType = .tilt
+    @Published var controlType: GameSettings.ControlType = .tilt
 
     private let motionManager = CMMotionManager()
     private var referenceAttitude: CMAttitude?
@@ -48,8 +34,7 @@ final class InputManager: ObservableObject {
     private func loadSettings() {
         let dataManager = GameDataManager()
         let settings = dataManager.loadSettings()
-        controlType = settings.controlType == .tilt ? .tilt :
-                      settings.controlType == .touch ? .touch : .twoThumb
+        controlType = settings.controlType
         sensitivity = settings.tiltSensitivity
     }
 

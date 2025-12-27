@@ -3,133 +3,491 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		151CE2C345BE8F436579F23B /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED6C89774AFC26C0913EF66 /* GameCoordinator.swift */; };
+		1C450D8B77224EFA1BE3FDB7 /* VehiclePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E863A6C22AC955D4B1F3D1 /* VehiclePhysics.swift */; };
+		25571CB5F42D4717C6052942 /* DeliveryOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73E2670B3563B2BA7CF47A /* DeliveryOrder.swift */; };
+		42875566CC27C6F3579A0D5E /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE23638AA19ACA0E76B6BB /* PhysicsCategories.swift */; };
+		471B63171F39C990B3551791 /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C348ABFE6D9C5BB3180AB /* InputManager.swift */; };
+		599171554EFC171886C105BD /* BaseGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA56F9ED756AAD54CB6550C /* BaseGameScene.swift */; };
+		5F86A78E6FC7C1062249FAF3 /* CargoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F08E18B6DE360E1D4F3468 /* CargoItem.swift */; };
+		61408C1A7E99A125C0882116 /* RoadGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB35234D01902BA455851C /* RoadGenerator.swift */; };
+		61FAC2E28315741F900F2D3D /* DrivingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68A1DD016A31EB6F17446B /* DrivingScene.swift */; };
+		6766BF9B8EB21FB723B31D88 /* FarmScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D6FB9B5BDFFE092F1034C /* FarmScene.swift */; };
+		67A910FF611BA2FC9BD56825 /* GameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EFE4060DA407CA6328C68 /* GameConfiguration.swift */; };
+		747D9479EFDFF2D852E67EE5 /* FarmHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14E659D957AAD855D54067 /* FarmHUDView.swift */; };
+		76ABB079E68E12DEC814B78E /* CollisionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE45200830BB1D9A2A710CA /* CollisionHandler.swift */; };
+		7CB95308521A9B201AA73EE1 /* Vespa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A3492247EFD071560B0A7 /* Vespa.swift */; };
+		7D11BE616C41C3FB7D73AEC4 /* MountainTerrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896D6D750633E5EB66BE2FA /* MountainTerrain.swift */; };
+		7FDA15B09245F3E3F0A69083 /* DrivingHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264A2335B13FF6342E4CFB2 /* DrivingHUDView.swift */; };
+		839C930D03FBEE2C07CCDC7A /* ApeLambretta.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDFA92ABC4A68DF30903D61 /* ApeLambretta.swift */; };
+		8417EA997D724A334631489F /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F098F25027CF2BBE49C98D7 /* MainMenuView.swift */; };
+		955C965425734AF37D8B1DE0 /* CargoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCE5E3F270413BB8FDC80D /* CargoType.swift */; };
+		A5213F722B4B29C27C09F2AC /* PlayerProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00E5ACD4204D72DDB37BC8 /* PlayerProgress.swift */; };
+		AD82D72CC65A54BC4C841B9E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4C0FA7D4F011A85D2E4DA /* Vehicle.swift */; };
+		B375F228F904A85FF443C8F8 /* CargoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75097D4B21E98FE16C7E0FE /* CargoNode.swift */; };
+		B421DA502A343E3C18489626 /* GameContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AAD4F7752C46C51262CD66 /* GameContainerView.swift */; };
+		B57CCE6195A317220A956843 /* SicilianDeliveryRushApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518D8B679979620FA61F07F /* SicilianDeliveryRushApp.swift */; };
+		B76032D9F8E2D60518C35254 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F3786D14223262E212A212 /* SettingsView.swift */; };
+		BA695AB146FABC7242BC8B6D /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0AB84059E0BF2A42B765C /* AudioManager.swift */; };
+		CC88992F5C79B60DB13A93F6 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2819A95A510E769AF1106C5 /* CameraController.swift */; };
+		D11BE04BA0FBF31E3BDCC2DA /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDDA9C89E367DBA8FA2336 /* SCNVector3+Extensions.swift */; };
+		D75B0BDB55D698A04654119B /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACAA0CBF152BB0A9FE77CEF /* GameState.swift */; };
+		EDA165F88E6F7FFC3454DB34 /* LoadingPhaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF62C64CF8B09463723F7201 /* LoadingPhaseView.swift */; };
+		F0D6DC067B1ECC019847351A /* DeliveryCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485C7C1B596375BC65C1FE4 /* DeliveryCompleteView.swift */; };
+		F1FDE86163EBCF97D228B5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA376806D2D15B78663F0C94 /* Assets.xcassets */; };
+		F46D00EA09C8A6B6732F37FC /* PauseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BF7B101EDE6A851A047FD /* PauseMenuView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B00E5ACD4204D72DDB37BC8 /* PlayerProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProgress.swift; sourceTree = "<group>"; };
+		13E863A6C22AC955D4B1F3D1 /* VehiclePhysics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclePhysics.swift; sourceTree = "<group>"; };
+		1AAE23638AA19ACA0E76B6BB /* PhysicsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategories.swift; sourceTree = "<group>"; };
+		2BE45200830BB1D9A2A710CA /* CollisionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionHandler.swift; sourceTree = "<group>"; };
+		2E9A3492247EFD071560B0A7 /* Vespa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vespa.swift; sourceTree = "<group>"; };
+		2F098F25027CF2BBE49C98D7 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		37DCE5E3F270413BB8FDC80D /* CargoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoType.swift; sourceTree = "<group>"; };
+		3B51B01CDA7A7A38C28C2D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		499D6FB9B5BDFFE092F1034C /* FarmScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmScene.swift; sourceTree = "<group>"; };
+		4B7C348ABFE6D9C5BB3180AB /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		4D68A1DD016A31EB6F17446B /* DrivingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingScene.swift; sourceTree = "<group>"; };
+		5CFE53A7D8B24DAA39D8C8D7 /* SicilianDeliveryRush.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SicilianDeliveryRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6485C7C1B596375BC65C1FE4 /* DeliveryCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCompleteView.swift; sourceTree = "<group>"; };
+		65D0AB84059E0BF2A42B765C /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		6CCB35234D01902BA455851C /* RoadGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadGenerator.swift; sourceTree = "<group>"; };
+		7896D6D750633E5EB66BE2FA /* MountainTerrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainTerrain.swift; sourceTree = "<group>"; };
+		79B4C0FA7D4F011A85D2E4DA /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		7A73E2670B3563B2BA7CF47A /* DeliveryOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrder.swift; sourceTree = "<group>"; };
+		7E14E659D957AAD855D54067 /* FarmHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmHUDView.swift; sourceTree = "<group>"; };
+		80F08E18B6DE360E1D4F3468 /* CargoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoItem.swift; sourceTree = "<group>"; };
+		9ED6C89774AFC26C0913EF66 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		A4CDDA9C89E367DBA8FA2336 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		A7AAD4F7752C46C51262CD66 /* GameContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContainerView.swift; sourceTree = "<group>"; };
+		ADDFA92ABC4A68DF30903D61 /* ApeLambretta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApeLambretta.swift; sourceTree = "<group>"; };
+		BACAA0CBF152BB0A9FE77CEF /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		BB2EFE4060DA407CA6328C68 /* GameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfiguration.swift; sourceTree = "<group>"; };
+		BCA56F9ED756AAD54CB6550C /* BaseGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameScene.swift; sourceTree = "<group>"; };
+		C264A2335B13FF6342E4CFB2 /* DrivingHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingHUDView.swift; sourceTree = "<group>"; };
+		D75097D4B21E98FE16C7E0FE /* CargoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoNode.swift; sourceTree = "<group>"; };
+		DF62C64CF8B09463723F7201 /* LoadingPhaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPhaseView.swift; sourceTree = "<group>"; };
+		E2819A95A510E769AF1106C5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		F2F3786D14223262E212A212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F518D8B679979620FA61F07F /* SicilianDeliveryRushApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SicilianDeliveryRushApp.swift; sourceTree = "<group>"; };
+		FA376806D2D15B78663F0C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA3BF7B101EDE6A851A047FD /* PauseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenuView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
-		ROOT_GROUP = {
+		06F47F59A38271192335AF37 = {
 			isa = PBXGroup;
 			children = (
-				SOURCES_GROUP,
-				PRODUCTS_GROUP,
+				6BCA27CDB8E5449E70680F37 /* SicilianDeliveryRush */,
+				DD8FF5806AED8D66A6CCE355 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		SOURCES_GROUP = {
+		1A313C9906E1EE55F98ECF02 /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
+				ADDFA92ABC4A68DF30903D61 /* ApeLambretta.swift */,
+				79B4C0FA7D4F011A85D2E4DA /* Vehicle.swift */,
+				2E9A3492247EFD071560B0A7 /* Vespa.swift */,
+			);
+			path = Vehicles;
+			sourceTree = "<group>";
+		};
+		29CA832BB9F1DA82322ABA22 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				86A76C9CC0B56E6E314CBF29 /* Audio */,
+				C091143F70C882305CA3DE70 /* GameEngine */,
+				76291DF59B64F005988AE65D /* Persistence */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2BA0714B3304829364A0CEB4 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				46D1252C408E7A9B4223C1B8 /* Components */,
+				7CDA6E9561E9D7F0B9486D27 /* Modifiers */,
+				6EF7F64179239C30B70E2CC2 /* Views */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		4609E994C40B7842679BF348 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		46D1252C408E7A9B4223C1B8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4D8FD25338542BB0F89E60D4 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A9466CEF767D5AE9F51980BE /* Music */,
+				6D68CEF31F188846B474D388 /* SFX */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		52DAA3D125A3E8F9EEDC708A /* Cargo */ = {
+			isa = PBXGroup;
+			children = (
+				80F08E18B6DE360E1D4F3468 /* CargoItem.swift */,
+				37DCE5E3F270413BB8FDC80D /* CargoType.swift */,
+			);
+			path = Cargo;
+			sourceTree = "<group>";
+		};
+		5642E9A27DD4D8DA7EE17F31 /* Farm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Farm;
+			sourceTree = "<group>";
+		};
+		59E1DD92EDC9F16F368F54E2 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		5EDA05AEE87CAB9121714442 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				D76F55DFD4715F44E9B7F43B /* Camera */,
+				98C9FAB91177FF524D61F7C0 /* Nodes */,
+				7345EA0EDDA20FF7A6556008 /* Physics */,
+				DA2583B441D8D3E5A34CBF19 /* Scenes */,
+				8E575C6D285E1EF70C631A0B /* Shaders */,
+				71F177736A580F150FD5F250 /* Terrain */,
+			);
+			path = SceneKit;
+			sourceTree = "<group>";
+		};
+		6921243FFA59632B440F016E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F518D8B679979620FA61F07F /* SicilianDeliveryRushApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6AFD2CA6095C51D022196BD3 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4B7C348ABFE6D9C5BB3180AB /* InputManager.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		6BCA27CDB8E5449E70680F37 /* SicilianDeliveryRush */ = {
+			isa = PBXGroup;
+			children = (
+				3B51B01CDA7A7A38C28C2D4B /* Info.plist */,
+				6921243FFA59632B440F016E /* App */,
+				29CA832BB9F1DA82322ABA22 /* Core */,
+				6C0F811141AAE6678C0CB30B /* Extensions */,
+				6AFD2CA6095C51D022196BD3 /* Input */,
+				C9C47EF94F134FE1DE28B007 /* Models */,
+				BBC79EAFC730121807BA418D /* Resources */,
+				5EDA05AEE87CAB9121714442 /* SceneKit */,
+				2BA0714B3304829364A0CEB4 /* SwiftUI */,
 			);
 			path = SicilianDeliveryRush;
 			sourceTree = "<group>";
 		};
-		PRODUCTS_GROUP = {
+		6C0F811141AAE6678C0CB30B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDDA9C89E367DBA8FA2336 /* SCNVector3+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6D68CEF31F188846B474D388 /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		6EF7F64179239C30B70E2CC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6485C7C1B596375BC65C1FE4 /* DeliveryCompleteView.swift */,
+				C264A2335B13FF6342E4CFB2 /* DrivingHUDView.swift */,
+				7E14E659D957AAD855D54067 /* FarmHUDView.swift */,
+				A7AAD4F7752C46C51262CD66 /* GameContainerView.swift */,
+				DF62C64CF8B09463723F7201 /* LoadingPhaseView.swift */,
+				2F098F25027CF2BBE49C98D7 /* MainMenuView.swift */,
+				FA3BF7B101EDE6A851A047FD /* PauseMenuView.swift */,
+				F2F3786D14223262E212A212 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71F177736A580F150FD5F250 /* Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				7896D6D750633E5EB66BE2FA /* MountainTerrain.swift */,
+				6CCB35234D01902BA455851C /* RoadGenerator.swift */,
+			);
+			path = Terrain;
+			sourceTree = "<group>";
+		};
+		7345EA0EDDA20FF7A6556008 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				2BE45200830BB1D9A2A710CA /* CollisionHandler.swift */,
+				1AAE23638AA19ACA0E76B6BB /* PhysicsCategories.swift */,
+				13E863A6C22AC955D4B1F3D1 /* VehiclePhysics.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		76291DF59B64F005988AE65D /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				0B00E5ACD4204D72DDB37BC8 /* PlayerProgress.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		7CDA6E9561E9D7F0B9486D27 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		86A76C9CC0B56E6E314CBF29 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				65D0AB84059E0BF2A42B765C /* AudioManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		8E575C6D285E1EF70C631A0B /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		98C9FAB91177FF524D61F7C0 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				D75097D4B21E98FE16C7E0FE /* CargoNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		A9466CEF767D5AE9F51980BE /* Music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		BBC79EAFC730121807BA418D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA376806D2D15B78663F0C94 /* Assets.xcassets */,
+				4D8FD25338542BB0F89E60D4 /* Audio */,
+				4609E994C40B7842679BF348 /* Levels */,
+				59E1DD92EDC9F16F368F54E2 /* Textures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C091143F70C882305CA3DE70 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EFE4060DA407CA6328C68 /* GameConfiguration.swift */,
+				9ED6C89774AFC26C0913EF66 /* GameCoordinator.swift */,
+				BACAA0CBF152BB0A9FE77CEF /* GameState.swift */,
+			);
+			path = GameEngine;
+			sourceTree = "<group>";
+		};
+		C9C47EF94F134FE1DE28B007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52DAA3D125A3E8F9EEDC708A /* Cargo */,
+				DC917C52F0DCE0C45B3E6EA1 /* Delivery */,
+				5642E9A27DD4D8DA7EE17F31 /* Farm */,
+				1A313C9906E1EE55F98ECF02 /* Vehicles */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D76F55DFD4715F44E9B7F43B /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E2819A95A510E769AF1106C5 /* CameraController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		DA2583B441D8D3E5A34CBF19 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BCA56F9ED756AAD54CB6550C /* BaseGameScene.swift */,
+				4D68A1DD016A31EB6F17446B /* DrivingScene.swift */,
+				499D6FB9B5BDFFE092F1034C /* FarmScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DC917C52F0DCE0C45B3E6EA1 /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				7A73E2670B3563B2BA7CF47A /* DeliveryOrder.swift */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		DD8FF5806AED8D66A6CCE355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CFE53A7D8B24DAA39D8C8D7 /* SicilianDeliveryRush.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXNativeTarget section */
+		46D1D22272C2262BF5E08663 /* SicilianDeliveryRush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29C3D2E29DC9A1FB1AA03E89 /* Build configuration list for PBXNativeTarget "SicilianDeliveryRush" */;
+			buildPhases = (
+				D1FA717B7205887412CF1FEA /* Sources */,
+				53E489C30AFE57CAA2186354 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SicilianDeliveryRush;
+			packageProductDependencies = (
+			);
+			productName = SicilianDeliveryRush;
+			productReference = 5CFE53A7D8B24DAA39D8C8D7 /* SicilianDeliveryRush.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		PROJECT_ROOT = {
+		F1D240E0836ADFE7C05E7D5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					46D1D22272C2262BF5E08663 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
-			buildConfigurationList = BUILD_CONFIG_LIST;
+			buildConfigurationList = 0F900C79465A6300D1635461 /* Build configuration list for PBXProject "SicilianDeliveryRush" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = ROOT_GROUP;
-			productRefGroup = PRODUCTS_GROUP;
+			mainGroup = 06F47F59A38271192335AF37;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				46D1D22272C2262BF5E08663 /* SicilianDeliveryRush */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin XCBuildConfiguration section */
-		DEBUG_CONFIG = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
+/* Begin PBXResourcesBuildPhase section */
+		53E489C30AFE57CAA2186354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1FDE86163EBCF97D228B5CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		RELEASE_CONFIG = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1FA717B7205887412CF1FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C930D03FBEE2C07CCDC7A /* ApeLambretta.swift in Sources */,
+				BA695AB146FABC7242BC8B6D /* AudioManager.swift in Sources */,
+				599171554EFC171886C105BD /* BaseGameScene.swift in Sources */,
+				CC88992F5C79B60DB13A93F6 /* CameraController.swift in Sources */,
+				5F86A78E6FC7C1062249FAF3 /* CargoItem.swift in Sources */,
+				B375F228F904A85FF443C8F8 /* CargoNode.swift in Sources */,
+				955C965425734AF37D8B1DE0 /* CargoType.swift in Sources */,
+				76ABB079E68E12DEC814B78E /* CollisionHandler.swift in Sources */,
+				F0D6DC067B1ECC019847351A /* DeliveryCompleteView.swift in Sources */,
+				25571CB5F42D4717C6052942 /* DeliveryOrder.swift in Sources */,
+				7FDA15B09245F3E3F0A69083 /* DrivingHUDView.swift in Sources */,
+				61FAC2E28315741F900F2D3D /* DrivingScene.swift in Sources */,
+				747D9479EFDFF2D852E67EE5 /* FarmHUDView.swift in Sources */,
+				6766BF9B8EB21FB723B31D88 /* FarmScene.swift in Sources */,
+				67A910FF611BA2FC9BD56825 /* GameConfiguration.swift in Sources */,
+				B421DA502A343E3C18489626 /* GameContainerView.swift in Sources */,
+				151CE2C345BE8F436579F23B /* GameCoordinator.swift in Sources */,
+				D75B0BDB55D698A04654119B /* GameState.swift in Sources */,
+				471B63171F39C990B3551791 /* InputManager.swift in Sources */,
+				EDA165F88E6F7FFC3454DB34 /* LoadingPhaseView.swift in Sources */,
+				8417EA997D724A334631489F /* MainMenuView.swift in Sources */,
+				7D11BE616C41C3FB7D73AEC4 /* MountainTerrain.swift in Sources */,
+				F46D00EA09C8A6B6732F37FC /* PauseMenuView.swift in Sources */,
+				42875566CC27C6F3579A0D5E /* PhysicsCategories.swift in Sources */,
+				A5213F722B4B29C27C09F2AC /* PlayerProgress.swift in Sources */,
+				61408C1A7E99A125C0882116 /* RoadGenerator.swift in Sources */,
+				D11BE04BA0FBF31E3BDCC2DA /* SCNVector3+Extensions.swift in Sources */,
+				B76032D9F8E2D60518C35254 /* SettingsView.swift in Sources */,
+				B57CCE6195A317220A956843 /* SicilianDeliveryRushApp.swift in Sources */,
+				AD82D72CC65A54BC4C841B9E /* Vehicle.swift in Sources */,
+				1C450D8B77224EFA1BE3FDB7 /* VehiclePhysics.swift in Sources */,
+				7CB95308521A9B201AA73EE1 /* Vespa.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0FA2ADE633CD2CDE7E507BD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -157,10 +515,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -168,30 +526,148 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SicilianDeliveryRush/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		2D6B42CBD74532E719FE61F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SicilianDeliveryRush/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaskviby.SicilianDeliveryRush;
+				SDKROOT = iphoneos;
+				SUPPORTED_INTERFACE_ORIENTATIONS = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"SUPPORTED_INTERFACE_ORIENTATIONS~ipad" = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79BB06B07EA8DAD367150E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SicilianDeliveryRush/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaskviby.SicilianDeliveryRush;
+				SDKROOT = iphoneos;
+				SUPPORTED_INTERFACE_ORIENTATIONS = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"SUPPORTED_INTERFACE_ORIENTATIONS~ipad" = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6164253BBAF57946008CC30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SicilianDeliveryRush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BUILD_CONFIG_LIST = {
+		0F900C79465A6300D1635461 /* Build configuration list for PBXProject "SicilianDeliveryRush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEBUG_CONFIG,
-				RELEASE_CONFIG,
+				E6164253BBAF57946008CC30 /* Debug */,
+				0FA2ADE633CD2CDE7E507BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		29C3D2E29DC9A1FB1AA03E89 /* Build configuration list for PBXNativeTarget "SicilianDeliveryRush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D6B42CBD74532E719FE61F0 /* Debug */,
+				79BB06B07EA8DAD367150E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
 	};
-	rootObject = PROJECT_ROOT;
+	rootObject = F1D240E0836ADFE7C05E7D5C /* Project object */;
 }
